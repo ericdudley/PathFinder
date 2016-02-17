@@ -1,5 +1,5 @@
 #Pathfinder
-This branch is aimed at making graphical improvements to the framework.
+This branch is aimed at making graphical improvements to the framework. TEST
 #Pathfinding Testing Framework
 Various implementations of path finding algorithms with a node field construction and rendering framework to use them.
 
