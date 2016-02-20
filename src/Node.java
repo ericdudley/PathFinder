@@ -1,8 +1,22 @@
+import java.util.ArrayList;
+
 /**
  * Created by ericd on 2/16/2016.
  * Nodes with position and weight value.
  */
 public class Node implements Comparable{
+    public ArrayList<Node> getAdj() {
+        return this.adj;
+    }
+
+    public void setAdj(ArrayList<Node> adj) {
+        this.adj = adj;
+    }
+    public void addAdj(Node node)
+    {
+        this.adj.add(node);
+    }
+    private ArrayList<Node> adj = new ArrayList<Node>();
     public Tuple getPos() {
         return pos;
     }
