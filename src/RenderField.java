@@ -118,27 +118,4 @@ public class RenderField extends JFrame {
             }
         }
     }
-
-
-    public static void main(String[] args)
-    {
-        Field test = null;
-        Path path = null;
-        PathFinder.dir8 = true;
-        PathFinder.vaulting = true;
-        int size = 15;
-        double density = 0.0;
-        int counter = 0;
-        while(path == null)
-        {
-            //System.out.println(counter);
-            counter++;
-            test = new Field(size+"x"+size+" Random Field with obstacle density of "+density,size,size,density);
-            path = PathFinder.findPath(test, test.getField()[0][0], test.getField()[size-1][size-1]);
-        }
-        RenderField renderer = new RenderField(test,path);
-        renderer.render();
-        System.out.println("Required: "+counter+" iterations");
-
-    }
 }
