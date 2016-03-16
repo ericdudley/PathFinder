@@ -5,6 +5,15 @@ import java.util.ArrayList;
  * Nodes with position and weight value.
  */
 public class Node implements Comparable{
+    public boolean isSearched() {
+        return searched;
+    }
+
+    public void setSearched(boolean searched) {
+        this.searched = searched;
+    }
+
+    private boolean searched;
     public ArrayList<Node> getAdj() {
         return this.adj;
     }
@@ -27,6 +36,15 @@ public class Node implements Comparable{
 
     private Tuple pos;
 
+    public Tuple getWorldPos() {
+        return worldPos;
+    }
+
+    public void setWorldPos(Tuple worldPos) {
+        this.worldPos = worldPos;
+    }
+
+    private Tuple worldPos;
     public int getWeight() {
         return weight;
     }
@@ -79,6 +97,9 @@ public class Node implements Comparable{
         this.pos = pos;
         this.weight = weight;
         this.solid = solid;
+        this.searched = false;
+        this.worldPos = pos;
+
     }
 
     public boolean equals(Object obj)

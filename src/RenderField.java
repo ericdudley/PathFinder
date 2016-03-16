@@ -56,6 +56,10 @@ public class RenderField extends JFrame {
                 Node $ = this.field.getField()[y][x];
                 special = false;
                 g.setColor(Color.GREEN);
+                if($.isSearched())
+                {
+                    g.setColor(Color.CYAN);
+                }
                 if(this.path != null)
                 {
                     if(this.path.contains($))

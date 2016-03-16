@@ -109,6 +109,8 @@ public class AStar extends PathFinder {
         {
             counter++;
             curr = open.get(0);
+            this.nodeSearched();
+            curr.setSearched(true);
             open.remove(curr);
             closed.add(curr);
             curr.getAdj().clear();
