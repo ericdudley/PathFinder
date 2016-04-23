@@ -1,3 +1,10 @@
+package pathfinders;
+
+import model.Field;
+import model.Node;
+import model.Path;
+import model.Tuple;
+
 import java.util.ArrayList;
 
 /**
@@ -82,7 +89,7 @@ public abstract class PathFinder {
         return dx+dy;
     }
 
-    protected int getNodesSearched()
+    public int getNodesSearched()
     {
         return this.nodes_searched;
     }
@@ -103,7 +110,7 @@ public abstract class PathFinder {
 
     private boolean use_world_pos;
 
-    protected void reset()
+    public void reset()
     {
         this.nodes_searched = 0;
     }

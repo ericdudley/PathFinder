@@ -1,4 +1,9 @@
-import java.lang.reflect.Array;
+package pathfinders;
+
+import model.Field;
+import model.Node;
+import model.Path;
+
 import java.util.ArrayList;
 import java.util.Collections;
 

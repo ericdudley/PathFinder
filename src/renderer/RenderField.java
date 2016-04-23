@@ -1,12 +1,13 @@
-/**
+package renderer; /**
  * Created by ericd on 2/16/2016.
  */
 
+import model.Field;
+import model.Node;
+import model.Path;
+
 import javax.swing.*;
 import java.awt.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class RenderField extends JFrame {
     public static final int WINDOW_SIZE = 800;
