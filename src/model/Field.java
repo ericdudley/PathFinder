@@ -26,6 +26,15 @@ public class Field {
         this(name,width,height,new RandomField(),DEFAULT_OBSTACLE_DENSITY);
     }
 
+    public Field(Node[][] field)
+    {
+        this.name = "Default Name";
+        this.width = field[0].length;
+        this.height = field.length;
+        this.field = field;
+        this.id = next_id;
+        next_id++;
+    }
     public Field(String name, int width, int height, FieldBuilder fieldBuilder, double... params)
     {
         this.name = name;
