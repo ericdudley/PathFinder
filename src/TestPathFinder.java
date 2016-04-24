@@ -15,19 +15,21 @@ public class TestPathFinder {
     public static void main(String[] args)
     {
         Path path = null;
-        int size = 20;
-        double density = 0.4;
+        int size = 70;
+        double density = 0.3;
         int counter = 0;
         PathFinder astar = new AStar(
-                new Field(size+"x"+size+" Random model.Field with obstacle density of "+density,size,size,new DidleyField(), density));
-        //RenderField renderer = new RenderField(astar.getFieldObj());
-        //renderer.render();
-        for(int i=0; i<11; i++)
+                new Field(size+"x"+size+" Random model.Field with obstacle density of "+density,size,size,new EmptyField(), density));
+        RenderField renderer0 = new RenderField(astar.getFieldObj(), astar.findPath(astar.getField()[0][0],astar.getField()[size-1][size-1]));
+        //renderer0.render();
+        for(double i=9.9999; i<11; i+=1)
         {
-            double squash = (double)(i)/10;
+            double squash = i/10;
             Field field = new Field("Test for "+squash, size, size, new DidleyField(), squash);
             PathFinder astar2 = new AStar(field);
+            astar2.setDir8(false);
             Path path2 = astar2.findPath(astar2.getField()[0][0], astar2.getField()[size-1][size-1]);
+            //RenderField renderer = new RenderField(field);
             RenderField renderer = new RenderField(astar2.getFieldObj(), path2);
             renderer.render();
         }

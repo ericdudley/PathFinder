@@ -144,6 +144,10 @@ public class AStar extends PathFinder {
                     $.setParent(curr);
                     open.add($);
                     Collections.sort(open);
+                    if(Math.random() > 1.0)
+                    {
+                        Collections.shuffle(open);
+                    }
                 }
             }
             //System.out.println("Stuck! "+open.size());
