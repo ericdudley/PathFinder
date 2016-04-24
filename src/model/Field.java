@@ -63,5 +63,24 @@ public class Field {
     public int getWidth(){ return this.width; }
     public int getHeight(){ return this.height; }
 
+    public String toString()
+    {
+        String rstr = "";
+        for(int y=0; y<this.height; y++)
+        {
+            for(int x=0; x<this.width; x++)
+            {
+                String sym = "1";
+                if(this.field[y][x].isSolid())
+                {
+                    sym = "0";
+                }
+                rstr += sym+" ";
+            }
+            rstr += "\n";
+        }
+        return rstr;
+    }
+
 
 }
